@@ -53,8 +53,7 @@
         "../scripts/jdk.sh",
         "../scripts/scala.sh",
         "../scripts/sbt.sh",
-        "../scripts/kafka.sh",
-        "../scripts/redis.sh"
+        "../scripts/kafka.sh"
       ],
       "type": "shell"
     },
