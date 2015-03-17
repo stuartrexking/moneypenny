@@ -23,7 +23,7 @@ mount -o loop /home/packer/VBoxGuestAdditions_$VERSION.iso /tmp/virtualbox
 sh /tmp/virtualbox/VBoxLinuxAdditions.run
 umount /tmp/virtualbox
 rmdir /tmp/virtualbox
-rm /home/vagrant/*.iso
+rm /home/packer/*.iso
 
 dd if=/dev/zero of=/EMPTY bs=1M
 rm /EMPTY
