@@ -5,7 +5,7 @@ set -e
 apt-get update
 apt-get -y upgrade
 
-apt-get -y install curl ntp zip unzip
+apt-get -y install curl ntp zip unzip build-essential
 
 ufw allow ssh
 ufw allow ntp

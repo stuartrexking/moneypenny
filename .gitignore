@@ -1,0 +1,7 @@
+*.iso
+.DS_Store
+.idea
+*.box
+packer_cache
+Vagrantfile
+.vagrant

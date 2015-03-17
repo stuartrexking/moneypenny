@@ -2,9 +2,44 @@
 
 MoneyPenny is a repository of scripts to enable automated testing of cloud based producer/consumer achitectures.
 
+ * [Dependencies](#dependencies)
+ * [Build for Vagrant](#build-for-vagrant)
+ * [Run on Vagrant](#run-on-vagrant)
+
+### Dependencies
+
+You **don't** need all dependencies. Only install the ones you need.
+
+ * To **build**  VM's you need [Packer](https://www.packer.io/)
+ * To **run** VM's locally you need [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/)
+
+### Build for Vagrant
+
+ 1. Install [Packer](https://www.packer.io/)
+ 1. Clone this repository
+ 1. Run `cd packer;packer build ubuntu.json`
+
+This will
+
+ 1. Download and cache the [ubuntu-14.04.2-server-amd64.iso](http://releases.ubuntu.com/14.04.2/ubuntu-14.04.2-server-amd64.iso) from the Ubuntu repository.
+ 1. Build the box as per the ubuntu.json configuration
+ 1. Create a Vagrant box **packer_virtualbox-iso_virtualbox.box**
+
+### Run in Vagrant
+
+ 1. Install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/)
+ 1. From the packer directory, run `vagrant box add mp packer_virtualbox-iso_virtualbox.box` which will add your new box to Vagrant
+ 1. Init the box with `vagrant init mp`. This step creates a local Vagrantfile that you can customise further.
+ 1. Run `vagrant up` to start the instance.
+ 1. Run `vagrant ssh` to ssh into the running instance.
+
+*Everything below this line is WIP and included for discussion only. The stuff below will be moved above the line as it's developed.*
+
 ---
 
 The goal of this repository is to be able automate the creation, provisioning and performance testing of various producer/consumer products on the cloud.
+
+---
 
 ##Types of tests
 Various performance tests will be made available. As some products will suport various configurations and not others and some may perform better under varying load, we will provide a range of tests.
