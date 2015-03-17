@@ -41,11 +41,9 @@
             "virtualbox_version_file": ".vbox_version"
         },
         {
-            "access_key": "AKIAJYNQZTQBTBT737IQ",
             "ami_name": "ubuntu-14.04.2-server-amd64-{{timestamp}}",
             "instance_type": "t2.small",
             "region": "eu-west-1",
-            "secret_key": "cDSBK900g8jYG0lIxdTM1DbKAYKdcg/k2xhKd26R",
             "source_ami": "ami-edfd6e9a",
             "ssh_username": "ubuntu",
             "type": "amazon-ebs"
