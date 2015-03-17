@@ -4,3 +4,4 @@
 *.box
 packer_cache
 Vagrantfile
+.vagrant
