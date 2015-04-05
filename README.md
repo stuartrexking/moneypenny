@@ -5,6 +5,7 @@ MoneyPenny is a repository of scripts to enable automated testing of cloud based
  * [Dependencies](#dependencies)
  * [Build for Vagrant](#build-for-vagrant)
  * [Run on Vagrant](#run-on-vagrant)
+ * [Build AMI for EC2](#build-ami-for-ec2)
 
 ### Dependencies
 
@@ -17,13 +18,21 @@ You **don't** need all dependencies. Only install the ones you need.
 
  1. Install [Packer](https://www.packer.io/)
  1. Clone this repository
- 1. Run `cd packer;packer build ubuntu.json`
+ 1. Run `cd packer;packer build -only=virtualbox-iso ubuntu.json`
 
 This will
 
  1. Download and cache the [ubuntu-14.04.2-server-amd64.iso](http://releases.ubuntu.com/14.04.2/ubuntu-14.04.2-server-amd64.iso) from the Ubuntu repository.
  1. Build the box as per the ubuntu.json configuration
  1. Create a Vagrant box **packer_virtualbox-iso_virtualbox.box**
+
+### Build AMI for EC2
+
+ 1. Install [Packer](https://www.packer.io/)
+ 1. Clone this repository
+ 1. Run `cd packer;packer build -only=amazon-ebs ubuntu.json`
+
+This will build an AMI in the eu-west-1 region.
 
 ### Run in Vagrant
 
