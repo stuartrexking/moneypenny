@@ -24,7 +24,7 @@ You **don't** need all dependencies. Only install the ones you need.
  1. Init the box with `vagrant init lxc`. This step creates a local Vagrantfile that you can customise further.
  1. Add the mount config to mount the ./scripts directory in the instance by editing the Vagrantfile and adding `config.vm.synced_folder "../scripts", "/scripts"`
  1. Run `vagrant up` to start the instance.
- 1. Run `vagrant ssh -p` to ssh into the running instance as your github user.
+ 1. Run `ssh -p 2222 [user]@127.0.0.1` to ssh into the running instance as your github user. Replace `[user]` with your user defined in `/scripts/admin/users.sh` i.e. `ssh -p 2222 leecampbell@127.0.0.1`
  1. Once inside the instance you can build the containers by running `cd /scripts/lxc;./kafka.sh`
  1. You can check everything built as expected with `lxc-ls --fancy`. You should see
 
