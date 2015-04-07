@@ -1,0 +1,3 @@
+# Ensure that linux targeted files files that will always have LF line endings on checkout. 
+# This is intended to allow the default windows behaviour of normalizing line endings to CRLF for all files except those needed by the linux VMs.
+*.sh text eol=lf
